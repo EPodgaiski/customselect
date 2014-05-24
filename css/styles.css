@@ -39,6 +39,7 @@ sup{position:relative; bottom:1.2ex; font-size:.7em; line-height:1; vertical-ali
 
 textarea{padding:5px 10px; resize:vertical;}
 
+/*THIS CSS*/
 select, .select{height:34px; padding:5px 5px 5px 10px; vertical-align:baseline; cursor:pointer;}
 .select{display:inline-block; padding-right:25px;
 	background:-webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#f1f1f1));
@@ -60,14 +61,7 @@ select, .select{height:34px; padding:5px 5px 5px 10px; vertical-align:baseline; 
 	.select.disabled:hover{border-color:#d4d4d4; color:#646263;}
 	.select.disabled:hover .select_val:after{border-top-color:#646263;}
 }
-
-.text_input.error{}
-	.text_input.error:focus, textarea.error:focus{}
-
-.text_input.disabled, .text_input[disabled], select[disabled], .select.disabled{cursor:default;
-	-webkit-box-shadow:none !important;
-	box-shadow:none !important;
-}
+/*THIS CSS EOF*/
 
 ::-webkit-input-placeholder{color:#989795;}
 :-moz-placeholder{color:#989795 !important;}
@@ -157,7 +151,8 @@ h2{padding:10px 0; color:black; font-size:16px; line-height:1.2;}
 	.example .select + .select{margin-left:7px;}
 
 
-/*footer*/
+/* Footer
+******************************/
 footer{position:absolute; bottom:0; left:0; height:70px; width:100%;}
 	footer .wrapper{padding-top:25px; overflow:hidden; border-top:1px solid #e6e6e6; color:gray;}
 	footer a{color:gray;}
