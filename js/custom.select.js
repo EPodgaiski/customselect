@@ -1,5 +1,5 @@
 //******************************
-// customSelect, 2014, jQuery plugin
+// customSelect, 2014, jQuery script
 // Creater: Egor Podgaiski, http://gorik.name/
 // Dual licensed under the MIT and GPL licenses:
 // http://www.opensource.org/licenses/mit-license.php
