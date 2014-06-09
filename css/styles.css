@@ -48,14 +48,14 @@ select, .select{height:34px; padding:5px 5px 5px 10px; vertical-align:baseline; 
 	background:-o-linear-gradient(#fff 0%, #f1f1f1 100%);
 	background:linear-gradient(#fff 0%, #f1f1f1 100%);
 }
-	.select select{opacity:0; position:absolute; top:0; left:0; width:100%; height:100%; margin:0;}
+	.select select{opacity:0; position:absolute; top:0; left:0; width:100% !important; height:100% !important; margin:0; padding:0;}
 	.select_val{display:block; font-size:14px; line-height:22px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 		.select_val:before{content:attr(data-label); color:#646263;}
 		.select_val:after{content:''; display:block; position:absolute; right:10px; top:50%; margin-top:-1px; border-top:4px solid; border-left:4px solid transparent; border-right:4px solid transparent;}
 
 	.select.disabled{border-color:#d4d4d4; color:#646263;}
 
-@media only screen and (min-width:1004px){
+@media only screen and (min-width:1004px){/*hover*/
 	.select:hover{border-color:#0097e6;}
 	.select:hover .select_val:after{border-top-color:#0097e6;}
 	.select.disabled:hover{border-color:#d4d4d4; color:#646263;}
@@ -105,7 +105,7 @@ ul{list-style:none;}
 
 /* Main
 ******************************/
-.main{min-width:780px; max-width:1110px; min-height:100%; position:relative; margin:0 auto; background-color:#fdfdfd; 
+.main{min-width:320px; max-width:1110px; min-height:100%; position:relative; margin:0 auto; background-color:#fdfdfd; 
 	-webkit-box-shadow:0 0 6px RGBA(0,0,0,.15);
 	box-shadow:0 0 6px RGBA(0,0,0,.15);
 }
@@ -114,7 +114,7 @@ ul{list-style:none;}
 
 /* header
 ******************************/
-header{padding:10px; font:16px Georgia,'Times New Roman',Times,serif;}
+header{padding:10px 0; font:16px Georgia,'Times New Roman',Times,serif;}
 	header .wrapper{padding-bottom:25px; border-bottom:1px solid #e6e6e6;}
 	header a{color:black; text-shadow:1px 1px rgba(255,255,255,.7);}
 
@@ -157,3 +157,13 @@ footer{position:absolute; bottom:0; left:0; height:70px; width:100%;}
 	footer .wrapper{padding-top:25px; overflow:hidden; border-top:1px solid #e6e6e6; color:gray;}
 	footer a{color:gray;}
 	.creater{float:right; margin-right:10px;}
+
+
+/*Responce
+******************************/
+@media only screen and (max-width:767px){
+	h1{padding-bottom:15px; font-size:1.5em;}
+	pre{font-size:10px;}
+	.example .select{display:block;}
+	.example .select + .select{margin-top:10px; margin-left:0;}
+}

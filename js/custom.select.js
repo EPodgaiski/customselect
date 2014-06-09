@@ -9,15 +9,25 @@
 function customSelect(selector){
     $(selector).each(function(){
         var $this = $(this),
-            selVal = $this.find('option:selected').text() || ' ',
+            selOption = $this.find('option:selected'),
+            selVal = selOption.text() || ' ',
             selWrap = $('<span />',{'class':'select'}).addClass($this.attr('class')),
             customSelVal = $('<span>',{'class':'select_val','text':selVal}),
             selLabel = $this.attr('data-label') || 0,
+            selPlaceholder = $this.attr('data-placeholder') || 0,
             selStyle = $this.attr('style') || 0,
             selWidth = $this.attr('width') || 0;
 
         if($this.prop('disabled')){
             selWrap.addClass('disabled');
+        }
+        if (selPlaceholder.length){
+            $this.attr('autocomplete','off')
+            if(selPlaceholder == 'optionFirst'){/*TODO убрать/заменить значени селекта null*/
+                $this.find('option').eq(0).attr('disabled','disabled').hide();
+            }else{
+                customSelVal.text(selPlaceholder);
+            }
         }
         if (selLabel.length){
             customSelVal.attr('data-label', selLabel + ' ');
@@ -31,6 +41,7 @@ function customSelect(selector){
 
         $this.wrap(selWrap);
         customSelVal.prependTo($this.parent());
+        // console.log($this, $this.val());
     })
 
     $('select').on({

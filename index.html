@@ -32,7 +32,7 @@
       <section>
         <h2>Описание:</h2>
 
-        <p>Небольшой скрипт для изменения внешнего вида элемента <b>&lt;select></b> на странице. При этом выпадающий список оставляем нативный.</p>
+        <p>Небольшой скрипт для изменения внешнего вида элемента <b>&lt;select/></b> на странице. При этом выпадающий список оставляем нативный.</p>
       </section>
 
       <section>
@@ -46,7 +46,7 @@
             <option value="3">что-нибуть</option>
             <option value="4">только нужные</option>
           </select>
-        </div>
+        </div><!-- example EOF -->
 
         <div class="example">
           <div class="title">Disabled</div>
@@ -56,7 +56,7 @@
             <option value="3">что-нибуть</option>
             <option value="4">только нужные</option>
           </select>
-        </div>
+        </div><!-- example EOF -->
 
         <div class="example">
           <div class="title">C фиксированным текстом</div>
@@ -66,7 +66,7 @@
             <option value="3">по наличию</option>
             <option value="4">по популярности</option>
           </select>
-        </div>
+        </div><!-- example EOF -->
 
         <div class="example">
           <div class="title">C фиксированной шириной</div>
@@ -82,7 +82,27 @@
             <option value="3">по наличию</option>
             <option value="4">по популярности</option>
           </select>
-        </div>
+        </div><!-- example EOF -->
+
+        <div class="example">
+          <div class="title">C подсказкой</div>
+          <select data-placeholder="Выберите нужный пункт">
+            <option value="1">быстро, качественно</option>
+            <option value="2">качественно, не дорого</option>
+            <option value="3">быстро, дешево</option>
+          </select>
+        </div><!-- example EOF -->
+
+        <div class="example">
+          <div class="title">C подсказкой в otion</div>
+          <select data-placeholder="optionFirst" style="width:150px;">
+            <option value="">выбрать</option>
+            <option value="3">деньги</option>
+            <option value="2">время</option>
+            <option value="1">счастье</option>
+          </select>
+        </div><!-- example EOF -->
+
       </section>
 
       <section>
@@ -107,6 +127,7 @@
         <h2>Параметры:</h2>
 
         <p><b>data-label</b> - атрибут, который добавляет фиксированый текст в селект.</p>
+        <p><b>data-placeholder</b> - атрибут, который добавляет placeholder в селект перед выбором значения. Значение <i>"optionFirst"</i> подставляет текст из первого элемента <b>&lt;option/></b> в селекте, а сам <b>&lt;option/></b> делается невидимым.</p>
       </section>
 
       <section>
@@ -117,7 +138,7 @@
       </section>
 
     </div>
-  </div>
+  </div><!-- content EOF -->
 
   <footer>
     <div class="wrapper clearfix">
