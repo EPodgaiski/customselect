@@ -63,5 +63,4 @@ function customSelectChange(el){
         tSelVal = el.find('option:selected').text();
 
     el.closest('.select').find('.select_val').text(tSelVal);
-    el.closest('.select').attr('class', el.attr('class'));
 }
